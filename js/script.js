@@ -10,7 +10,7 @@ $(function(){
     var firstItem = carouselList.find("li:first");
     var lastItem = carouselList.find("li:last");
     lastItem.after(firstItem);
-    carouselList.css({marginLeft:0});
+    carouselList.css({marginLeft: 0});
   }
 
   function moveLastSlide() {
@@ -23,10 +23,10 @@ $(function(){
   //Arrows to changeSlide
   var leftArrow = $('#btn-left');
   var rightArrow = $('#btn-right');
-  leftArrow.click(function() {
+  leftArrow.on('click', function() {
     carouselList.animate({'marginLeft':400}, 500, moveLastSlide);
   });
-  rightArrow.click(function() {
+  rightArrow.on('click', function() {
     changeSlide();
   });
 });
